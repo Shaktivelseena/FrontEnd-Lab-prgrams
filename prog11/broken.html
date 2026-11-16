@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Therature Movie System M,angaement</title>
+</head>
+<body>
+  <h1>Movie Therature M,angaement</h1>
+
+  <label for="movie">Select a movie:</label>
+  <select id="movie">
+    <option value="10">Space Adventure — $10</option>
+    <option value="12">The Funny One — $12</option>
+  </select>
+
+  <label for="tickets">Number of tickets:</label>
+  <input id="tickets" type="number" value="1">
+
+  <button onclick="bookTickts()">Book tickets</button>
+
+  <p id="result">Total: $0</p>
+
+  <script>
+    function bookTickets() {
+      const movie = document.getElementById("movie");
+      const tickets = document.getElementById("ticket");
+      const total = movie.value * tickets.value;
+
+      document.getElementById("result").innerHTML =
+        "Total: $" + total;
+    }
+  </script>
+</body>
+</html>
